@@ -1,0 +1,17 @@
+.DS_Store
+npm-debug.log
+.vscode
+.idea
+.ipynb_checkpoints
+logfile.log
+
+__pycache__
+
+*.bkp
+*.pyc
+soljson-*
+
+src_solidity/build/
+src_solidity/test/
+running_data/
+bin/

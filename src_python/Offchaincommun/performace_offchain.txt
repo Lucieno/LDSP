@@ -1,0 +1,318 @@
+=============after setting 32 num coin========================
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.leader                                                                                    
+Generating Merchant Keys                                                                                                                                                                                    
+setVk result: True                                                                                                                                                                                          
+setVk used gas: 105692                                                                                                                                                                                      
+setEpochIndex result: True                                                                                                                                                                                  
+setEpochIndex used gas: 90090                                                                                                                                                                               
+Leader listening on port 33150                                                                                                                                                                              
+Time for Leader receiving PreSpend to sending Signature: 31.319856643676758 ms                                                                                                                              
+Time for Leader receiving PreSpend to sending Signature: 25.35533905029297 ms                                                                                                                               
+Time for Leader receiving PreSpend to sending Signature: 46.64325714111328 ms                   
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.merchant --ip 10.0.2.12
+Loading Existing Merchant Keys
+Merchant listening on port 33200
+Time for Merchant receiving to sending PreSpend: 11.714935302734375 ms
+Time for Merchant sending PreSpend to receiving Signature: 32.953739166259766 ms
+Time for Merchant receiving to sending Signature: 21.734237670898438 ms
+Time for Merchant sending Signature to receiving Puzzle and Solution: 18.50724220275879 ms
+Time for Merchant receiving to sending PreSpend: 11.142969131469727 ms
+Time for Merchant sending PreSpend to receiving Signature: 26.322603225708008 ms
+Time for Merchant receiving to sending Signature: 13.660192489624023 ms
+Time for Merchant sending Signature to receiving Puzzle and Solution: 27.53138542175293 ms
+Time for Merchant receiving to sending PreSpend: 12.107610702514648 ms
+Time for Merchant sending PreSpend to receiving Signature: 48.00057411193848 ms
+Time for Merchant receiving to sending Signature: 17.718791961669922 ms
+Time for Merchant sending Signature to receiving Puzzle and Solution: 27.200937271118164 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 4.115581512451172 ms
+Time for Client sending PreSpend to receiving signature: 68.50957870483398 ms
+Time for Client verifying Signature: 14.660358428955078 ms
+Time for Client reading and sending Puzzle and Solution: 2.3708343505859375 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 0.9431838989257812 ms
+Time for Client sending PreSpend to receiving signature: 53.09343338012695 ms
+Time for Client verifying Signature: 25.80857276916504 ms
+Time for Client reading and sending Puzzle and Solution: 1.0216236114501953 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 0.8859634399414062 ms
+Time for Client sending PreSpend to receiving signature: 81.72178268432617 ms
+Time for Client verifying Signature: 23.560523986816406 ms
+Time for Client reading and sending Puzzle and Solution: 1.1749267578125 ms
+                                                                                    
+=============after setting 256Mbit bandwidth and 256 num coin========================
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.leader
+Loading Existing Merchant Keys
+setVk result: True
+setVk used gas: 105692
+setEpochIndex result: True
+setEpochIndex used gas: 90090
+Leader listening on port 33150
+Time for Leader receiving PreSpend to sending Signature: 30.483722686767578 ms
+Time for Leader receiving PreSpend to sending Signature: 27.04143524169922 ms
+Time for Leader receiving PreSpend to sending Signature: 25.706052780151367 ms
+Time for Leader receiving PreSpend to sending Signature: 27.011394500732422 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.merchant --ip 10.0.2.12
+Loading Existing Merchant Keys
+Merchant listening on port 33200
+Time for Merchant receiving to sending PreSpend: 11.593818664550781 ms
+Time for Merchant sending PreSpend to receiving Signature: 32.70244598388672 ms
+Time for Merchant receiving to sending Signature: 16.1287784576416 ms
+Time for Merchant sending Signature to receiving Puzzle and Solution: 20.751476287841797 ms
+Time for Merchant receiving to sending PreSpend: 11.199235916137695 ms
+Time for Merchant sending PreSpend to receiving Signature: 28.916358947753906 ms
+Time for Merchant receiving to sending Signature: 19.408702850341797 ms
+Time for Merchant sending Signature to receiving Puzzle and Solution: 30.70664405822754 ms
+Time for Merchant receiving to sending PreSpend: 10.84446907043457 ms
+Time for Merchant sending PreSpend to receiving Signature: 27.437925338745117 ms
+Time for Merchant receiving to sending Signature: 10.062932968139648 ms
+Time for Merchant sending Signature to receiving Puzzle and Solution: 27.8623104095459 ms
+Time for Merchant receiving to sending PreSpend: 11.215686798095703 ms
+Time for Merchant sending PreSpend to receiving Signature: 28.737783432006836 ms
+Time for Merchant receiving to sending Signature: 18.663406372070312 ms
+Time for Merchant sending Signature to receiving Puzzle and Solution: 22.760391235351562 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12 --coin 256
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 0.9148120880126953 ms
+Time for Client sending PreSpend to receiving signature: 66.47467613220215 ms
+Time for Client verifying Signature: 19.6530818939209 ms
+Time for Client reading and sending Puzzle and Solution: 2.154111862182617 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12 --coin 256
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 0.8900165557861328 ms
+Time for Client sending PreSpend to receiving signature: 50.76289176940918 ms
+Time for Client verifying Signature: 19.55270767211914 ms
+Time for Client reading and sending Puzzle and Solution: 1.8982887268066406 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12 --coin 256
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 0.9026527404785156 ms
+Time for Client sending PreSpend to receiving signature: 67.9619312286377 ms
+Time for Client verifying Signature: 13.916730880737305 ms
+Time for Client reading and sending Puzzle and Solution: 2.5551319122314453 ms
+=============after setting 256 num coin========================     
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.leader
+Loading Existing Merchant Keys
+setVk result: True
+setVk used gas: 105692
+setEpochIndex result: True
+setEpochIndex used gas: 90090
+Leader listening on port 33150
+Time for Leader receiving PreSpend to sending Signature: 28.666019439697266 ms
+Time for Leader receiving PreSpend to sending Signature: 30.220985412597656 ms
+Time for Leader receiving PreSpend to sending Signature: 26.003122329711914 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.merchant --ip 10.0.2.12
+Loading Existing Merchant Keys
+Merchant listening on port 33200
+Time for Merchant receiving to sending PreSpend: 11.88039779663086 ms
+Time for Merchant sending PreSpend to receiving Signature: 30.29179573059082 ms
+Time for Merchant receiving to sending Signature: 16.878843307495117 ms
+Time for Merchant sending Signature to receiving Puzzle and Solution: 27.357101440429688 ms
+Time for Merchant receiving to sending PreSpend: 11.566877365112305 ms
+Time for Merchant sending PreSpend to receiving Signature: 31.24213218688965 ms
+Time for Merchant receiving to sending Signature: 18.07093620300293 ms
+Time for Merchant sending Signature to receiving Puzzle and Solution: 26.849985122680664 ms
+Time for Merchant receiving to sending PreSpend: 10.860204696655273 ms
+Time for Merchant sending PreSpend to receiving Signature: 27.10437774658203 ms
+Time for Merchant receiving to sending Signature: 10.342121124267578 ms
+Time for Merchant sending Signature to receiving Puzzle and Solution: 25.18463134765625 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12 --coin 256
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 0.8995532989501953 ms
+Time for Client sending PreSpend to receiving signature: 65.60087203979492 ms
+Time for Client verifying Signature: 15.540599822998047 ms
+Time for Client reading and sending Puzzle and Solution: 1.085042953491211 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12 --coin 256
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 0.9250640869140625 ms
+Time for Client sending PreSpend to receiving signature: 67.39521026611328 ms
+Time for Client verifying Signature: 20.660877227783203 ms
+Time for Client reading and sending Puzzle and Solution: 1.0221004486083984 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12 --coin 256
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 0.8933544158935547 ms
+Time for Client sending PreSpend to receiving signature: 50.19402503967285 ms
+Time for Client verifying Signature: 23.46348762512207 ms
+Time for Client reading and sending Puzzle and Solution: 1.1224746704101562 ms
+=============after setting 8Mbit bandwidth and 256 num coin========================
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.leader
+Loading Existing Merchant Keys
+setVk result: True
+setVk used gas: 105692
+setEpochIndex result: True
+setEpochIndex used gas: 90090
+Leader listening on port 33150
+Time for Leader receiving PreSpend to sending Signature: 24.063825607299805 ms
+Time for Leader receiving PreSpend to sending Signature: 27.538061141967773 ms
+Time for Leader receiving PreSpend to sending Signature: 22.596359252929688 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.merchant --ip 10.0.2.12
+Loading Existing Merchant Keys
+Merchant listening on port 33200
+Time for Merchant receiving to sending PreSpend: 19.971609115600586 ms
+Time for Merchant sending PreSpend to receiving Signature: 49.689531326293945 ms
+Time for Merchant receiving to sending Signature: 12.008428573608398 ms
+Time for Merchant sending Signature to receiving Puzzle and Solution: 25.523662567138672 ms
+Time for Merchant receiving to sending PreSpend: 21.582365036010742 ms
+Time for Merchant sending PreSpend to receiving Signature: 42.11854934692383 ms
+Time for Merchant receiving to sending Signature: 11.50369644165039 ms
+Time for Merchant sending Signature to receiving Puzzle and Solution: 27.085304260253906 ms
+Time for Merchant receiving to sending PreSpend: 22.405147552490234 ms
+Time for Merchant sending PreSpend to receiving Signature: 37.37521171569824 ms
+Time for Merchant receiving to sending Signature: 11.772632598876953 ms
+Time for Merchant sending Signature to receiving Puzzle and Solution: 23.317575454711914 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12 --coin 256
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 0.8852481842041016 ms
+Time for Client sending PreSpend to receiving signature: 97.9454517364502 ms
+Time for Client verifying Signature: 17.12203025817871 ms
+Time for Client reading and sending Puzzle and Solution: 2.853870391845703 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12 --coin 256
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 0.8790493011474609 ms
+Time for Client sending PreSpend to receiving signature: 91.56656265258789 ms
+Time for Client verifying Signature: 23.69236946105957 ms
+Time for Client reading and sending Puzzle and Solution: 2.889871597290039 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12 --coin 256
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 0.9257793426513672 ms
+Time for Client sending PreSpend to receiving signature: 87.4476432800293 ms
+Time for Client verifying Signature: 17.3490047454834 ms
+Time for Client reading and sending Puzzle and Solution: 3.5021305084228516 ms
+***update on 4/21 2:00***
+=============after 256 num coin========================
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.leader                                                                                    
+Loading Existing Merchant Keys                                                                                                                                                                              
+setVk result: True                                                                                                                                                                                          
+setVk used gas: 105692                                                                                                                                                                                      
+setEpochIndex result: True                                                                                                                                                                                  
+setEpochIndex used gas: 90090                                                                                                                                                                               
+Leader listening on port 33150                                                                                                                                                                              
+Time for Leader receiving PreSpend to sending Signature: 31.6007137298584 ms                                                                                                                                
+Time for Leader receiving PreSpend to sending Signature: 22.797822952270508 ms                                                                                                                              
+Time for Leader receiving PreSpend to sending Signature: 46.845436096191406 ms   
+
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.merchant --ip 10.0.2.12                                                                   
+Loading Existing Merchant Keys                                                                                                                                                                              
+Merchant listening on port 33200                                                                                                                                                                            
+Time for Merchant receiving to sending PreSpend: 14.937400817871094 ms                                                                                                                                      
+Time for Merchant sending PreSpend to receiving Signature: 33.21647644042969 ms                                                                                                                             
+Time for Merchant receiving to sending Signature: 23.424148559570312 ms                                                                                                                                     
+Time for Merchant sending Signature to receiving Puzzle and Solution: 16.62731170654297 ms                                                                                                                  
+Time for Merchant receiving to sending PreSpend: 12.65263557434082 ms                                                                                                                                       
+Time for Merchant sending PreSpend to receiving Signature: 23.7576961517334 ms                                                                                                                              
+Time for Merchant receiving to sending Signature: 10.753393173217773 ms                                                                                                                                     
+Time for Merchant sending Signature to receiving Puzzle and Solution: 18.373966217041016 ms                                                                                                                 
+Time for Merchant receiving to sending PreSpend: 15.623331069946289 ms                                                                                                                                      
+Time for Merchant sending PreSpend to receiving Signature: 48.1572151184082 ms                                                                                                                              
+Time for Merchant receiving to sending Signature: 13.36359977722168 ms                                                                                                                                      
+Time for Merchant sending Signature to receiving Puzzle and Solution: 26.154041290283203 ms 
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12 --coin 256
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 0.8766651153564453 ms
+Time for Client sending PreSpend to receiving signature: 74.28169250488281 ms
+Time for Client verifying Signature: 14.516830444335938 ms
+Time for Client reading and sending Puzzle and Solution: 1.0340213775634766 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12 --coin 256
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 0.8652210235595703 ms
+Time for Client sending PreSpend to receiving signature: 49.06868934631348 ms
+Time for Client verifying Signature: 16.74652099609375 ms
+Time for Client reading and sending Puzzle and Solution: 0.9660720825195312 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12 --coin 256
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 1.1332035064697266 ms
+Time for Client sending PreSpend to receiving signature: 79.3006420135498 ms
+Time for Client verifying Signature: 18.779993057250977 ms
+Time for Client reading and sending Puzzle and Solution: 1.718759536743164 ms
+
+=============after setting 8Mbit bandwidth and 256 num coin========================
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.leader
+Loading Existing Merchant Keys
+setVk result: True
+setVk used gas: 105692
+setEpochIndex result: True
+setEpochIndex used gas: 90090
+Leader listening on port 33150
+Time for Leader receiving PreSpend to sending Signature: 22.377729415893555 ms
+Time for Leader receiving PreSpend to sending Signature: 33.81514549255371 ms
+Time for Leader receiving PreSpend to sending Signature: 21.485328674316406 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.merchant --ip 10.0.2.12
+Loading Existing Merchant Keys
+Merchant listening on port 33200
+Time for Merchant receiving to sending PreSpend: 26.52764320373535 ms
+Time for Merchant sending PreSpend to receiving Signature: 38.78474235534668 ms
+Time for Merchant receiving to sending Signature: 12.372255325317383 ms
+Time for Merchant sending Signature to receiving Puzzle and Solution: 22.267580032348633 ms
+Time for Merchant receiving to sending PreSpend: 15.283823013305664 ms
+Time for Merchant sending PreSpend to receiving Signature: 48.36535453796387 ms
+Time for Merchant receiving to sending Signature: 11.079072952270508 ms
+Time for Merchant sending Signature to receiving Puzzle and Solution: 15.111684799194336 ms
+Time for Merchant receiving to sending PreSpend: 12.962102890014648 ms
+Time for Merchant sending PreSpend to receiving Signature: 36.147356033325195 ms
+Time for Merchant receiving to sending Signature: 15.268564224243164 ms
+Time for Merchant sending Signature to receiving Puzzle and Solution: 21.57306671142578 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12 --coin 256
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 0.9276866912841797 ms
+Time for Client sending PreSpend to receiving signature: 96.10605239868164 ms
+Time for Client verifying Signature: 17.009258270263672 ms
+Time for Client reading and sending Puzzle and Solution: 3.3719539642333984 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12 --coin 256
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 0.9019374847412109 ms
+Time for Client sending PreSpend to receiving signature: 90.44957160949707 ms
+Time for Client verifying Signature: 11.715173721313477 ms
+Time for Client reading and sending Puzzle and Solution: 2.6743412017822266 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12 --coin 256
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 0.9093284606933594 ms
+Time for Client sending PreSpend to receiving signature: 80.38735389709473 ms
+Time for Client verifying Signature: 16.138315200805664 ms
+Time for Client reading and sending Puzzle and Solution: 2.9489994049072266 ms
+=============after setting 10ms delay 8Mbit bandwidth and 256 num coin========================
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ sudo tc qdisc replace dev lo root netem delay 10ms rate 8Mbit
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.leader
+Loading Existing Merchant Keys
+setVk result: True
+setVk used gas: 105692
+setEpochIndex result: True
+setEpochIndex used gas: 90090
+Leader listening on port 33150
+Time for Leader receiving PreSpend to sending Signature: 84.91683006286621 ms
+Time for Leader receiving PreSpend to sending Signature: 64.49270248413086 ms
+Time for Leader receiving PreSpend to sending Signature: 67.84701347351074 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.merchant --ip 10.0.2.12
+Loading Existing Merchant Keys
+Merchant listening on port 33200
+Time for Merchant receiving to sending PreSpend: 14.130592346191406 ms
+Time for Merchant sending PreSpend to receiving Signature: 162.97578811645508 ms
+Time for Merchant receiving to sending Signature: 12.117147445678711 ms
+Time for Merchant sending Signature to receiving Puzzle and Solution: 40.81892967224121 ms
+Time for Merchant receiving to sending PreSpend: 13.294219970703125 ms
+Time for Merchant sending PreSpend to receiving Signature: 99.58529472351074 ms
+Time for Merchant receiving to sending Signature: 28.151988983154297 ms
+Time for Merchant sending Signature to receiving Puzzle and Solution: 38.73896598815918 ms
+Time for Merchant receiving to sending PreSpend: 26.507854461669922 ms
+Time for Merchant sending PreSpend to receiving Signature: 103.0430793762207 ms
+Time for Merchant receiving to sending Signature: 37.676334381103516 ms
+Time for Merchant sending Signature to receiving Puzzle and Solution: 64.8190975189209 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12 --coin 256
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 0.9622573852539062 ms
+Time for Client sending PreSpend to receiving signature: 268.2461738586426 ms
+Time for Client verifying Signature: 16.401052474975586 ms
+Time for Client reading and sending Puzzle and Solution: 23.593425750732422 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12 --coin 256
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 0.8854866027832031 ms
+Time for Client sending PreSpend to receiving signature: 220.38006782531738 ms
+Time for Client verifying Signature: 12.435436248779297 ms
+Time for Client reading and sending Puzzle and Solution: 23.245573043823242 ms
+(py3.6)anna@anna-VirtualBox:/media/sf_sharefolder_sol/performance/zerosnappy$ python -m src_python.Offchaincommun.customer --ip 10.0.2.12 --coin 256
+Loading Existing Merchant Keys
+Time for Client generating PreSpend: 0.9086132049560547 ms
+Time for Client sending PreSpend to receiving signature: 247.7700710296631 ms
+Time for Client verifying Signature: 33.76030921936035 ms
+Time for Client reading and sending Puzzle and Solution: 23.473739624023438 ms

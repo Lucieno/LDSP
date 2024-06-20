@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+message PaymentInfo {
+    uint32 customer_id = 1;
+    string prespend = 2;
+}
+
+message MerchantPayInfo {
+    uint32 merchant_id = 1;
+    string prespend = 2;
+}
+
+message Signature {
+    string signature = 1;
+}
+
+message PuzSol {
+    uint32 customer_id = 1;
+    string puzsol = 2;
+}
+
+message WithdrawalRequest {
+    uint32 customer_id = 1;
+    string fund_id = 2;
+    uint32 num_coin = 3;
+}
+
+message Y {
+    string Y = 1;
+}
+
+message MerchantSignature {
+    uint32 merchant_id = 1;
+    string signature = 2;
+}
+
+message CustomerSign {
+    uint32 customer_id = 1;
+    string signature = 2;
+    string blind_sn = 3;
+    string Y_sgn = 4;    
+}
+
+message Empty {
+}
+
+service OffchainCommun {
+    rpc StartPayment(PaymentInfo) returns (stream Signature) {}
+    rpc ProcessPayment(MerchantPayInfo) returns (stream Signature) {}
+    rpc TransmitPuzSol(PuzSol) returns (Empty) {}
+    rpc StartWithdrawal(WithdrawalRequest) returns (stream Y) {}
+    rpc SingleBlindSignMerge(MerchantSignature) returns (Empty) {}
+    rpc BatchWithdrawC2M(CustomerSign) returns (Empty) {}
+    rpc BatchBlindSignM2L(MerchantSignature) returns (Empty) {}
+    rpc BatchWithdrawC2L(CustomerSign) returns (stream Signature) {}
+}
+
